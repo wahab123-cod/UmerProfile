@@ -23,7 +23,7 @@
           <ul class="space-y-2">
             <li v-for="(skill, index) in category.items" :key="index" class="flex items-start space-x-2">
               <font-awesome-icon :icon="skill.icon" :class="skill.color" class="text-lg mt-1" />
-              <span>{{ skill.text }}</span>
+             
             </li>
           </ul>
         </div>
@@ -36,28 +36,15 @@
 </template>
 
 <script>
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faPython, faJs, faJava, faHtml5, faCss3, faVuejs, faReact, faGithub, faAws,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faDatabase, faRobot, faCloud, faCode, faCodeBranch, faBrain, faCogs, faLaptopCode, faServer, faLayerGroup, faChartLine
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(
-  faPython, faJs, faJava, faHtml5, faCss3, faVuejs, faReact, faGithub, faAws,
-  faDatabase, faRobot, faCloud, faCode, faCodeBranch, faBrain, faCogs, faLaptopCode, faServer, faLayerGroup, faChartLine
-);
 
 export default {
-  name: "Skills",
+
   components: { FontAwesomeIcon },
   data() {
     return {
       skillCategories: [
         {
-          name: "Programming / Scripting Languages",
+          
           items: [
             { text: "Python", icon: ["fab", "python"], color: "text-yellow-400" },
             { text: "JavaScript", icon: ["fab", "js"], color: "text-yellow-300" },
